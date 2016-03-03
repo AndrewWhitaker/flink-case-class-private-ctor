@@ -25,3 +25,11 @@ object TestApp {
     def create(i: Int) = Wrapper(i)
   }
 }
+
+/*
+Compiling yields:
+[error] TestApp.scala:18: could not find implicit value for evidence parameter of type org.apache.flink.api.common.typeinfo.TypeInformation[List[scala.util.Try[TestApp.Wrapper]]]
+[error]       .fold(List[Try[Wrapper]](), new FoldFunction[Tuple2[Int, Int], List[Try[Wrapper]]] {
+[error]            ^
+[error] one error found
+ */
